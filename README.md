@@ -65,8 +65,7 @@ Tilgjengelig på http://it2810-11.idi.ntnu.no/project1/
 
 eventuelt
 
-1. Klon dette repositoriet:
-   git clone (https://git.ntnu.no/IT2810-H24/T11-Project-1.git)
+1. Klon dette repositoriet
 2. cd prosjek1
 3. npm install
 4. npm run dev
