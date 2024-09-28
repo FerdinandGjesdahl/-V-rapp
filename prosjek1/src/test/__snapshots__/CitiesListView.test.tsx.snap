@@ -1,0 +1,121 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CitiesListView > should render the component and display cities 1`] = `
+<div>
+  <div
+    id="listDiv"
+  >
+    <h1>
+      Velg by
+    </h1>
+    <select>
+      <option
+        value=""
+      >
+        Alle byer
+      </option>
+      <option
+        value="Favoritter"
+      >
+        Favoritter
+      </option>
+      <option
+        value="Nord-Norge"
+      >
+        Nord-Norge
+      </option>
+      <option
+        value="Midt-Norge"
+      >
+        Midt-Norge
+      </option>
+      <option
+        value="Sør-Norge"
+      >
+        Sør-Norge
+      </option>
+      <option
+        value="Øst-Norge"
+      >
+        Øst-Norge
+      </option>
+      <option
+        value="Vestlandet"
+      >
+        Vestlandet
+      </option>
+    </select>
+    <button
+      style="background-color: rgb(0, 123, 255); color: white; display: block; margin: 10px auto;"
+    >
+      Vis byer med regn i dag
+    </button>
+    <button
+      style="display: block; margin: 10px auto;"
+    >
+      Sorter etter Temperatur
+    </button>
+    <ul
+      class="city-list"
+    >
+      <li
+        class="city-item show"
+      >
+        <img
+          alt="Bergen"
+          class="city-image"
+          src=""
+        />
+        <div>
+          <span>
+            Bergen
+          </span>
+          <p>
+            Temperatur: 
+            15
+            °C
+          </p>
+        </div>
+      </li>
+      <li
+        class="city-item show"
+      >
+        <img
+          alt="Oslo"
+          class="city-image"
+          src=""
+        />
+        <div>
+          <span>
+            Oslo
+          </span>
+          <p>
+            Temperatur: 
+            15
+            °C
+          </p>
+        </div>
+      </li>
+      <li
+        class="city-item show"
+      >
+        <img
+          alt="Trondheim"
+          class="city-image"
+          src=""
+        />
+        <div>
+          <span>
+            Trondheim
+          </span>
+          <p>
+            Temperatur: 
+            15
+            °C
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+}
+
+/* Container-stiler */
+.Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+/* Listecontainer */
+#listDiv {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  max-width: 30%;
+  min-width: 280px;
+  margin-right: 30px;
+  margin-top: 20px;
+  flex: 1;
+  box-sizing: border-box;
+  overflow: hidden; 
+  word-wrap: break-word; 
+  word-break: break-all; 
+}
+
+/* Værtabellcontainer */
+#weathertableDiv {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 400px;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-right: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabellstiler */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(20, 16, 16, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+thead {
+  background-color: #0056b3;
+  color: white;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.2s ease-in;
+}
+
+td:nth-child(3) {
+  color: #e76f51;
+  font-weight: bold;
+}
+
+td:nth-child(6) {
+  font-style: italic;
+  color: #2a9d8f;
+}
+
+td img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Knapper */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  margin: 10px 5px;
+  font-family: 'Verdana', sans-serif;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.favoritt-knapp {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.logoImage {
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: -10px 10px 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #004085;
+  font-family: 'Georgia', serif;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Bylisten */
+.city-list {
+  list-style: none;
+  padding: 0;
+}
+
+.city-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  flex-wrap: nowrap; /* Sørger for at teksten og bildet holder seg på samme linje */
+}
+
+.city-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.city-item:hover {
+  background-color: #dfe6ff;
+  transform: translateY(-5px);
+}
+
+.city-image {
+  width: 20%;
+  height: 4.5vw;
+  border-radius: 50%;
+  margin-right: 5%;
+  object-fit: cover;
+}
+
+.city-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-item span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2b2d42;
+}
+
+.city-item p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.city-item:hover span {
+  color: #0056b3;
+}
+
+/* Responsivt design */
+@media (max-width: 1000px) {
+  .Container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #listDiv,
+  #weathertableDiv {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  table {
+    margin: 10px 0;
+  }
+
+  th {
+    font-size: 10px;
+  }
+
+  td {
+    font-size: 12px;
+  }
+
+  .vindbeskrivelse {
+    display: none;
+  }
+
+  td img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .logoImage {
+    display: none;
+  }
+  
+  #weathertableDiv {
+    width: 100%;
+    max-width: none;
+    margin-right: 8px;
+    padding: 5px;
+  }
+
+
+  .favoritt-knapp {
+    position: unset;
+    top: unset;
+    left: unset;
+  }
+
+  th {
+    font-size: 12px;
+  }
+
+  td {
+    font-size: 14px;
+  }
+}
+
