@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          deployment_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_NICE_SKY_03D4D8D1E }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_NICE_SKY_03D4D8D1E }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}  # Dette er automatisk tilgjengelig
           action: 'upload'
           app_location: './prosjek1'  # Sti til applikasjonsmappen din
